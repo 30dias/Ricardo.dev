@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: black;
+}
+
+.page{
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    color: whitesmoke;
+    background-color: black;
+    z-index: 2;
+    cursor: default;
+}
+.myname {
+    margin-left: 20%;
+    align-self: center;
+}
+.contactme{
+    margin-left: 20%;
+    color:whitesmoke;
+    font-size: 28px;
+}
+
+.logo{
+    width: 100px;
+    animation: colorchange 3s alternate infinite;
+}
+
+@keyframes colorchange{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.header-text{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 1;
+    cursor: default;
+}
+
+.typing-text{
+    font-size: 42px;
+    color: white;
+    z-index: 1;
+}
+.typing-text span{
+    position: relative;
+    background-color: black;
+}
+.typing-text span::before{
+    content: "Developer";
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 6px);
+    height: 100%;
+    background-color: black;
+    border-left: 2px solid white;
+    right: -6px;
+    animation: cursor .8s infinite, typing 20s steps(15) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid black;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Developer";
+        color: #90D482;
+    }
+    21%,40%{
+        content: "Analyst";
+        color: #7AC6C2;
+    }
+    41%,60%{
+        content: "Designer";
+        color: #D38812;
+    }
+    61%,80%{
+        content: "Data Engineer";
+        color: #AE8AE7;
+    }
+    81%,100%{
+        content: "Technician";
+        color: #E4465F;
+    }
+}
+
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,93%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%,99%{
+        width: calc(100% + 6px);
+    }
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutme{
+    text-align: justify;
+    width: 40%;
+    padding: 2%;
+    position: relative;
+    background-color: #E4465F;
+    border-radius: 20px;
+    color: whitesmoke;
+    cursor: default;
+}
+.aboutme::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    top: -30px;
+    opacity: 0%;
+    background-color: #D38812;
+    position: absolute;
+    animation: varia_tamanho1 30s infinite 1s alternate
+}
+.aboutme::after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    opacity: 0%;
+    top: -30px;
+    background-color: #AE8AE7;
+    position: absolute;
+    animation: varia_tamanho2 30s infinite alternate
+}
+@keyframes varia_tamanho1{
+    0%{width: 20px;height: 20px;left: 10%;}
+    10%{width: 35px; height: 40px; right: 5%;top: -20%;opacity: 100%;}
+    20%{width: 40px; height: 50px; right: 4%;top: -15%;opacity: 0%;}
+    25%{opacity: 0%;}
+    30%{width: 50px; height: 20px; left: 50%;top: 100%;opacity: 0%;}
+    40%{width: 85px; height: 40px; left: 55%;top: 105%;opacity: 100%; background-color: #CBC530;}
+    45%{opacity: 0%;}
+    50%{width: 90px; height: 50px; right: 120%;top: -15%;opacity: 0%;}
+    60%{width: 54px; height: 60px; right: 120%;top: -20%;opacity: 100%; background-color: #E02B0B;}
+    65%{opacity: 0%;}
+    70%{width: 25px; height: 20px; left: 10%;top: 100%;opacity: 0%;}
+    80%{width: 54px; height: 40px; left: 12%;top: 110%;opacity: 100%; background-color: #B7ECE7;}
+    85%{opacity: 0%;}
+    90%{width: 54px; height: 10px; right: 30%;top: -20%;opacity: 0%;}
+    100%{width: 54px; height: 50px; right: 35%;top: -20%;opacity: 100%; background-color: #4CDA80;}
+}
+@keyframes varia_tamanho2{
+    0%{width: 20px;height: 20px;left: 10%;}
+    10%{width: 35px; height: 40px; left: 5%;top: -20%;opacity: 100%;}
+    20%{width: 40px; height: 50px; left: 5%;top: -20%;opacity: 0%;}
+    25%{opacity: 0%;}
+    30%{width: 50px; height: 20px; right: 50%;top: 90%;opacity: 0%;}
+    40%{width: 85px; height: 40px; right: 55%;top: 105%;opacity: 100%; background-color: #90D482;}
+    45%{opacity: 0%;}
+    50%{width: 90px; height: 50px; left: 90%;top: -10%;opacity: 0%;}
+    60%{width: 54px; height: 60px; left: 99%;top: -15%;opacity: 100%; background-color: #7AC6C2;}
+    65%{opacity: 0%;}
+    70%{width: 25px; height: 20px; right: 10%;top: 100%;opacity: 0%;}
+    80%{width: 54px; height: 40px; right: 12%;top: 110%;opacity: 100%; background-color: #F55369;}
+    85%{opacity: 0%;}
+    90%{width: 54px; height: 10px; left: 30%;top: -20%;opacity: 0%;}
+    100%{width: 54px; height: 50px; left: 35%;top: -20%;opacity: 100%; background-color: #519ABA;}
+}
+
+.pc_video{
+    width: 40%;
+    height: 450px;
+}
+
+.contacts{
+    display: flex;
+    width: 90%;
+    margin: 5%;
+    height: 150px;
+    border-radius: 20px;
+    background-image: linear-gradient(45deg,#AE8AE7, #7AC6C2 );
+    align-items: center;
+    justify-content: center;
+}
+.number-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%;
+    gap: 10px;
+}
+.number-info p{
+    font-weight: bolder;
+}
+.contacts ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+}
+.contacts ul li a img{
+    width: 80px;
+}
+.giticon:hover{
+    border-radius: 50%;
+    background: white;
+}
+.linkedinicon:hover{
+    border-radius: 6px;
+    background: white;
+}
+.smile{
+    position: absolute;
+    margin-left: -20px;
+    width: 80px;
+}
+.smile:hover{
+    transform: rotate(180deg);
+    width: 82px;
+    margin-left: -22px;
+}
+
+/* VS CODE COLOR #282A36 */
+/* VS CODE DARK COLOR #1E1E1E */
