@@ -148,15 +148,14 @@ nav{
     border-radius: 6px;
     background: white;
 }
+
 .smile{
     position: absolute;
-    margin-left: -20px;
-    width: 80px;
+    width: 5vw;
 }
 .smile:hover{
     transform: rotate(180deg);
-    width: 82px;
-    margin-left: -22px;
+    width: 5.2vw;
 }
 
 @media screen and (max-width: 800px) {
@@ -200,5 +199,12 @@ nav{
 
     .contacts ul li a img{
         width: 40px;
+    }
+
+    .smile{
+        width: 40px;
+    }
+    .smile:hover{
+        width: 42px;
     }
 }
